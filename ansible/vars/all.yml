@@ -1,0 +1,31 @@
+---
+server:
+    install: '1'
+    packages: [htop, git, vim]
+    timezone: UTC
+    locale: pl_PL.UTF-8
+vagrant_local:
+    install: '1'
+    vm: { base_box: trusty64, hostname: local.sgc, ip: 192.168.56.102, memory: '2048', sharedfolder: '/var/www', useVagrantCloud: '1', syncType: nfs }
+apache:
+    install: '1'
+    docroot: /var/www/sgc/web
+    servername: sgc.local
+mysql:
+    mysql_root_user: root
+    mysql_root_pass: root
+    mysql_user: symfony
+    mysql_pass: symfony
+    mysql_db: symfony
+    mysql_bind_address: 0.0.0.0  # Allows all connections, for Production it should be 127.0.0.1
+    mysql_key_buffer: 64M
+php:
+    install: '1'
+    ppa: php5-5.6
+    packages: [php5-cli, php5-intl, php5-mcrypt, php5-memcached, php5-curl, php5-gd, php5-pgsql]
+xdebug:
+    install: '1'
+composer:
+    install: '1'
+
+
