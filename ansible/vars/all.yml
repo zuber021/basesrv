@@ -2,7 +2,7 @@
 server:
     install: '1'
     packages: [htop, git, vim]
-    timezone: UTC
+    timezone: Europe/Warsaw
     locale: pl_PL.UTF-8
 vagrant_local:
     install: '1'
@@ -22,7 +22,7 @@ mysql:
 php:
     install: '1'
     ppa: php5-5.6
-    packages: [php5-cli, php5-intl, php5-mcrypt, php5-memcached, php5-curl, php5-gd, php5-pgsql]
+    packages: [php5-cli, php5-intl, php5-mcrypt, php5-memcached, php5-curl, php5-gd, php5-pgsql, php5-mysql]
 xdebug:
     install: '1'
 composer:

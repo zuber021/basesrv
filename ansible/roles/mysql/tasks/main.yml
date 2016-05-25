@@ -43,3 +43,6 @@
 
 - name: remove default test MySQL DB
   mysql_db: name=test state=absent
+
+- name: create MySQL DB for Project
+  mysql_db: name={{ mysql.mysql_db }} encoding=utf8 state=present
