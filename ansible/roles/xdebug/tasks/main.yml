@@ -2,3 +2,6 @@
 - name: Install xDebug
   sudo: yes
   apt: pkg=php5-xdebug state=latest
+
+- name: copy xdebug.ini
+  template: src=xdebug.ini.j2 dest=/etc/php5/mods-available/xdebug.ini
